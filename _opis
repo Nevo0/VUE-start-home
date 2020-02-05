@@ -1,0 +1,19 @@
+tworzymy inputa
+<input
+        id="search"
+        name="search"
+        placeholder="City"
+        v-model="searchValue" to co jest zapisywane do data i tam bedzie pewnieprzechowywane
+        @input="handleInput" to nasz funkcja w korej mozemy robic cokolwiek
+      />
+
+data() {
+    return {
+        searchValue: ""
+    };
+},
+methods: {
+    handleInput() {
+        console.log(this.searchValue);
+    }
+}

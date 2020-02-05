@@ -19,7 +19,10 @@ module.exports = {
       "functions": "never"
     }],
     'linebreak-style': [0, "windows"],
-    'eslint-disable': [0, "eol-last"]
+    'eslint-disable': [0, "eol-last"],
+    'no-unused-vars': [0, { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "arrow-body-style": [0, "never"],
+    "arrow-parens": [0, "never"],
   },
   parserOptions: {
     parser: 'babel-eslint',
