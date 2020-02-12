@@ -19,6 +19,7 @@ module.exports = {
       "functions": "never"
     }],
     'linebreak-style': [0, "windows"],
+    'max-len': [0, { "ignoreComments": true }],
     'eslint-disable': [0, "eol-last"],
     'no-unused-vars': [0, { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     "arrow-body-style": [0, "never"],

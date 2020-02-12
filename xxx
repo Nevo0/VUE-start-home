@@ -2,13 +2,7 @@
   <div class="componet search">
     <div class="search">
       <label for="search"></label>
-      <input
-        id="search"
-        name="search"
-        placeholder="Anything space input"
-        v-model="searchValue"
-        :class="{dark: dark}"
-      />
+      <input id="search" name="search" placeholder="Anything space input" v-model="searchValue2" />
       <button v-on:click="handleInput">Search</button>
     </div>
     <div class="results"></div>
@@ -22,21 +16,12 @@ export default {
     value: {
       type: String,
       required: true
-    },
-    dark: {
-      type: Boolean,
-      default: false
     }
-  },
-  data() {
-    return {
-      searchValue: ""
-    };
   },
   methods: {
     handleInput(e) {
-      this.$emit("input", this.searchValue);
-      // console.log(this.searchValue);
+      this.$emit("input", e.target.value);
+      console.log(this.value);
     }
   }
 };
@@ -78,10 +63,6 @@ export default {
   button:hover {
     background-color: rgb(253, 113, 206);
     color: rgb(240, 255, 255);
-  }
-  .dark {
-    border-bottom: 1px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
   }
 }
 </style>
